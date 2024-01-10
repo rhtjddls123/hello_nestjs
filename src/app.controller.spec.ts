@@ -18,5 +18,8 @@ describe('AppController', () => {
     it('should return "Hello World!"', () => {
       expect(appController.getHello()).toBe('Hello World!');
     });
+    it('shold return "xxxxxxxxxxxxxxxx"', () => {
+      expect(appController.getX()).toBe('xxxxxxxxxxxxxxxx');
+    });
   });
 });

@@ -11,6 +11,8 @@ describe('AppController (e2e)', () => {
       imports: [AppModule],
     }).compile();
 
+    console.log('*************************');
+
     app = moduleFixture.createNestApplication();
     await app.init();
   });
@@ -20,5 +22,20 @@ describe('AppController (e2e)', () => {
       .get('/')
       .expect(200)
       .expect('Hello World!');
+  });
+  it('/x (GET)', () => {
+    return request(app.getHttpServer())
+      .get('/x')
+      .expect(200)
+      .expect('xxxxxxxxxxxxxxxx');
+  });
+
+  describe('Users Module', () => {
+    it('/users/100', () => {
+      return request(app.getHttpServer())
+        .get('/users/100')
+        .expect(200)
+        .expect({ id: 100, name: '홍길동' });
+    });
   });
 });

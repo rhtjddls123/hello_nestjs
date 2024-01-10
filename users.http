@@ -1,0 +1,12 @@
+### find user
+GET http://localhost:3001/users/100
+
+###
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+  "email": "indiflex.corp@gmail.com",
+  "passwd": "password123",
+  "addr": "서울"
+}

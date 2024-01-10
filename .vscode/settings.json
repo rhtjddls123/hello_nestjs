@@ -1,0 +1,14 @@
+{
+  "rest-client.environmentVariables": {
+    "$shared": {},
+    "LocalEnv": {
+      "host": "http://localhost:3001"
+    },
+    "DevEnv": {
+      "host": "http://dev.domain.com"
+    },
+    "ProdEnv": {
+      "host": "http://domain.com"
+    }
+  }
+}
